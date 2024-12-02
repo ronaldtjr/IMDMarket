@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IMDMARKET"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="#FF5722"
+            android:padding="16dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etCodigoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código do Produto (Obrigatório)"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/etNomeAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Produto (Opcional)"
+                android:minHeight="48dp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etDescricaoAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descrição do Produto (Opcional)"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:minHeight="48dp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etEstoqueAlterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Estoque (Opcional)"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:layout_marginTop="8dp" />
+
+
+            <Button
+                android:id="@+id/btnAlterarSalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alterar"
+                android:minHeight="48dp"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
