@@ -9,21 +9,25 @@ import androidx.appcompat.app.AppCompatActivity
 
 class ListarActivity : AppCompatActivity() {
 
+    private lateinit var dbHelper: DatabaseHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar)
 
+        dbHelper = DatabaseHelper(this)
 
-        val produtos = listOf("Produto 1", "Produto 2", "Produto 3")
         val listView = findViewById<ListView>(R.id.lvProdutos)
+        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+
+
+        val produtos = dbHelper.getAllProdutos()
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, produtos)
         listView.adapter = adapter
 
 
-        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
         btnVoltar.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MenuActivity::class.java))
             finish()
         }
     }
